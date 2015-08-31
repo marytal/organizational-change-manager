@@ -1,0 +1,49 @@
+.form {
+  .form-group {
+    display: block;
+  }
+
+  .submit {
+    -moz-border-radius:9px;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+    border:2px solid black;
+    background-color: #32CD99;
+    cursor:pointer;
+    font-family:Arial;
+    font-size:18px;
+    padding:4px 31px;
+    text-decoration:none;
+  }
+
+  .submit:active {
+    position:relative;
+    top:1px;
+  }
+
+  .text-area {
+    width: 400px;
+    height: 120px;
+    border: 3px solid #cccccc;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+  }
+
+  .checkbox-label {
+    font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+    font-size: 10px;
+  }
+
+  .textbox {
+    width: 200px;
+    height: 29px;
+    border-radius: 3px;
+    border: 1px solid #aaa;
+    padding: 8px;
+    font-weight: 200;
+    font-size: 15px;
+    font-family: Verdana;
+    box-shadow: 1px 1px 5px #CCC;
+    text-align: center;
+  }
+}

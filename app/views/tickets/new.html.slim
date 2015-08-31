@@ -1,0 +1,13 @@
+p.new_ticket.small_label
+  = t(:create_a_ticket)
+.form.user_form
+  = form_for @ticket = Ticket.new, url: tickets_path do |f|
+    = f.label :name, class: "small_label"
+    br
+    = f.text_field :name, class: "textbox"
+    br
+    = f.label :description, class: "small_label"
+    br
+    = f.text_area :description, class: "text-area"
+    br
+    = f.submit value: "submit", class: "submit"

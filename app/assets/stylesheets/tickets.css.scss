@@ -1,0 +1,88 @@
+// Place all the styles related to the Tickets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments {
+  display: inline-block;
+  width: 100%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+  .common {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    float: left;
+    width: 30%;
+    height: 500px;
+    padding: 15px;
+    padding-top: 15px;
+    margin: 5px;
+    overflow: scroll;
+    border: 4px solid white;
+  }
+
+  .positive {
+    border: 4px solid #ADEBD6;
+    background-color: #32CD99;
+
+  }
+
+  .neutral {
+    border: 4px solid #FFFDE5;
+    background-color: #FFF68F;
+
+  }
+
+  .negative {
+    border: 4px solid #FCE8EA;
+    background-color: #EB6772;
+
+  }
+}
+
+.suggestions {
+  display: inline-block;
+  width: 100%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+}
+
+.ticket_description {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 10px double black;
+
+  .name {
+  }
+
+  .description {
+    max-width: 33%;
+    padding-left: 20px;
+    padding-top: 5px;
+
+  }
+
+}
+
+.label {
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  font-size: 20px;
+  margin-bottom: -5px;
+  margin-left: 15px;
+}
+
+.small_label {
+  font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+  font-size: 20px;
+}
+
+.new_ticket {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 15px;
+}

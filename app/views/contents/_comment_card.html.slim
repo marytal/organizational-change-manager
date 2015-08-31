@@ -1,0 +1,15 @@
+
+.comment class="#{status}-comment"
+  .icons
+    span.agree_count data-hook="agree_#{comment.id}"
+        = comment.opinions.agree.size
+    | &nbsp;
+    i.fa.fa-thumbs-o-up data-hook="upvote" id="#{comment.id}"
+    br
+    span.disagree_count data-hook="disagree_#{comment.id}"
+        = comment.opinions.disagree.size
+    | &nbsp;
+    i.fa.fa-thumbs-o-down data-hook="downvote" id="#{comment.id}"
+  .content
+    = comment.content
+

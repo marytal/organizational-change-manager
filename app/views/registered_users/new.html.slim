@@ -1,0 +1,17 @@
+
+
+.signup.user_form.form
+  p.small_label
+    = t(:signup)
+  = form_for @user = RegisteredUser.new, url: registered_user_path do |f|
+    = f.text_field :username, placeholder: t(:username), class: "textbox"
+    br
+    = f.submit value: t(:signup), class: "submit"
+
+.signin.user_form.form
+  p.small_label
+    = t(:signin)
+  = form_for @user = RegisteredUser.new, url: registered_user_path do |f|
+    = f.text_field :username, placeholder: t(:username), class: "textbox"
+    br
+    = f.submit value: t(:signin), class: "submit"

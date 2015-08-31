@@ -1,0 +1,47 @@
+div
+  = render 'ticket_description'
+
+p.comment_label
+
+.comments
+  p.label
+    = t(:comments)
+  .common.positive
+    - if @comments.first.any?
+      = render 'contents/comments', comments: @comments.first, status: "positive"
+    - else
+      = t(:no_status_comments, status: t(:positive))
+  .common.neutral
+    - if @comments.second.any?
+      = render 'contents/comments', comments: @comments.second, status: "neutral"
+    - else
+      = t(:no_status_comments, status: t(:neutral))
+  .common.negative
+    - if @comments.third.any?
+      = render 'contents/comments', comments: @comments.third, status: "negative"
+    - else
+      = t(:no_status_comments, status: t(:negative))
+
+
+
+p.label
+  = t(:suggestions)
+
+.suggestions
+  = render 'contents/suggestions', suggestions: @suggestions
+
+
+  br
+
+.form
+  = form_for @content = Content.new, url: contents_path do |f|
+    = f.hidden_field :ticket_id, value: @ticket.id
+    = f.hidden_field :user_id, value: @current_user.id
+    = f.label t(:leave_a_comment), class: "small_label form-group"
+    = f.text_area :content, class: "form-group text-area"
+    = f.label :suggestion, class: "checkbox-label"
+    = f.check_box :suggestion, value: 0
+    = f.select :status, [t(:positive), t(:neutral), t(:negative)]
+    br
+    = f.submit class: "submit form-group"
+
